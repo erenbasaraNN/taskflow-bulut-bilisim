@@ -84,7 +84,7 @@ Proje, **IaaS (Infrastructure as a Service - Altyapı Hizmeti)** modelini temel 
                          │  │   Compute Engine VM          │     │
                          │  │   - Type: e2-micro           │     │
                          │  │   - OS: Debian 11            │     │
-                         │  │   - Region: [Your Region]    │     │
+                         │  │   - Region: us-central1      │     │
                          │  └──────────────────────────────┘     │
                          │              │                        │
                          │              ▼                        │
@@ -459,3 +459,4 @@ sudo certbot --apache -d yourdomain.com
 **Not:** Proje değerlendirmesi bittikten sonra ilgili bulut kaynakları (VM instance) maliyetten kaçınmak için silinecektir.
 
 ---
+
