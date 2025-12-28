@@ -366,7 +366,7 @@ sudo certbot --apache -d yourdomain.com
 ## 8. Sunum ve İletişim
 
 ### 📹 Video Sunumu
-**YouTube Sunum Videosu:** [BURAYA VİDEO LİNKİNİZİ YAPIŞTIRIN]
+**YouTube Sunum Videosu:** [https://www.youtube.com/watch?v=gkgpP_-phis]
 
 **Video İçeriği:**
 - Proje tanıtımı
@@ -459,4 +459,5 @@ sudo certbot --apache -d yourdomain.com
 **Not:** Proje değerlendirmesi bittikten sonra ilgili bulut kaynakları (VM instance) maliyetten kaçınmak için silinecektir.
 
 ---
+
 
