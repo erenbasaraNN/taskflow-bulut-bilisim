@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern ve kullanıcı dostu görev yönetim uygulaması - Bulut Bilişim Projesi">
+    <title>TaskFlow - Görev Yöneticisi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 11L12 14L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h1>TaskFlow</h1>
+            </div>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">Toplam</span>
+                    <span class="stat-value" id="total-tasks">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Tamamlanan</span>
+                    <span class="stat-value" id="completed-tasks">0</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Add Task Form -->
+        <div class="add-task-section">
+            <form id="task-form" class="task-form">
+                <div class="form-group">
+                    <input 
+                        type="text" 
+                        id="task-input" 
+                        placeholder="Yeni görev ekle..."
+                        required
+                        autocomplete="off"
+                    >
+                    <select id="priority-select" class="priority-select">
+                        <option value="low">Düşük Öncelik</option>
+                        <option value="medium" selected>Orta Öncelik</option>
+                        <option value="high">Yüksek Öncelik</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Ekle
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+            <button class="filter-tab active" data-filter="all">
+                Tümü
+                <span class="tab-count" id="count-all">0</span>
+            </button>
+            <button class="filter-tab" data-filter="active">
+                Aktif
+                <span class="tab-count" id="count-active">0</span>
+            </button>
+            <button class="filter-tab" data-filter="completed">
+                Tamamlanan
+                <span class="tab-count" id="count-completed">0</span>
+            </button>
+        </div>
+
+        <!-- Tasks List -->
+        <div class="tasks-container">
+            <div id="tasks-list" class="tasks-list"></div>
+            <div id="empty-state" class="empty-state">
+                <div class="empty-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 11L12 14L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3>Henüz görev yok</h3>
+                <p>Yeni bir görev ekleyerek başlayın!</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Bulut Bilişim Projesi - TaskFlow © 2025</p>
+            <p class="tech-stack">HTML • CSS • JavaScript</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
